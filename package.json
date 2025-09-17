@@ -3,10 +3,16 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "bun --env-file=.env --filter '@vinyl-webshop/server' build && bun --env-file=.env --filter '@vinyl-webshop/server' start",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "check-types": "turbo run check-types",
+    "migrate": "bun --env-file=.env --filter '@vinyl-webshop/database' migrate",
+    "generate": "bun --env-file=.env --filter '@vinyl-webshop/database' generate",
+    "push": "bun --env-file=.env --filter '@vinyl-webshop/database' push",
+    "studio": "bun --env-file=.env --filter '@vinyl-webshop/database' studio",
+    "server:build": "bun --env-file=.env run --filter '@vinyl-webshop/server' build",
+    "server:start": "bun --env-file=.env run --filter '@vinyl-webshop/server' start"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
