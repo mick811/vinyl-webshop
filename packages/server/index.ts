@@ -2,15 +2,15 @@ import cors from "@fastify/cors";
 
 import type { FastifyPluginAsync } from "fastify";
 
-const app: FastifyPluginAsync<{}> = async (fastify, opts): Promise<void> => {
+// biome-ignore lint/complexity/noBannedTypes: We intentionally use {} here
+const app: FastifyPluginAsync<{}> = async (fastify, _opts): Promise<void> => {
+	await fastify.register(cors, {
+		origin: ["*"],
+	});
 
-    await fastify.register(cors, {
-        origin: ["*"],
-    })
-
-    fastify.get("/", async (_request, reply) => {
-        reply.send("hello world");
-    })
-}
+	fastify.get("/", async (_request, reply) => {
+		reply.send("hello world");
+	});
+};
 
 export default app;
