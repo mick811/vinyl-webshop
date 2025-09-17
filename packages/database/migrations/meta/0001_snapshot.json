@@ -1,6 +1,6 @@
 {
-  "id": "1960b081-9ee0-4254-88cf-f7477f54b7c0",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "21eced4e-af4d-4a5c-93eb-a3c18e79ddf4",
+  "prevId": "1960b081-9ee0-4254-88cf-f7477f54b7c0",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -63,15 +63,13 @@
         },
         "media_condition": {
           "name": "media_condition",
-          "type": "vinyl_webshop_media_condition",
-          "typeSchema": "public",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "sleeve_condition": {
           "name": "sleeve_condition",
-          "type": "vinyl_webshop_sleeve_condition",
-          "typeSchema": "public",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -99,38 +97,7 @@
       "isRLSEnabled": false
     }
   },
-  "enums": {
-    "public.vinyl_webshop_media_condition": {
-      "name": "vinyl_webshop_media_condition",
-      "schema": "public",
-      "values": [
-        "mint",
-        "near_mint",
-        "very_good_plus",
-        "very_good",
-        "good_plus",
-        "good",
-        "fair",
-        "poor"
-      ]
-    },
-    "public.vinyl_webshop_sleeve_condition": {
-      "name": "vinyl_webshop_sleeve_condition",
-      "schema": "public",
-      "values": [
-        "mint",
-        "near_mint",
-        "very_good_plus",
-        "very_good",
-        "good_plus",
-        "good",
-        "fair",
-        "poor",
-        "generic",
-        "no_cover"
-      ]
-    }
-  },
+  "enums": {},
   "schemas": {},
   "sequences": {},
   "roles": {},
