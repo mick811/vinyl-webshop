@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "@vinyl-webshop/database",
   "module": "index.ts",
   "type": "module",
   "private": true,
