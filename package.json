@@ -3,7 +3,6 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
-		"dev": "bun --env-file=.env --filter '@vinyl-webshop/server' build && bun --env-file=.env --filter '@vinyl-webshop/server' start",
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"check-types": "turbo run check-types",
@@ -12,7 +11,9 @@
 		"push": "bun --env-file=.env --filter '@vinyl-webshop/database' push",
 		"studio": "bun --env-file=.env --filter '@vinyl-webshop/database' studio",
 		"server:build": "bun --env-file=.env run --filter '@vinyl-webshop/server' build",
-		"server:start": "bun --env-file=.env run --filter '@vinyl-webshop/server' start"
+		"server:start": "bun --env-file=.env run --filter '@vinyl-webshop/server' start",
+		"site:dev": "bun --env-file=.env run --filter '@vinyl-webshop/site' dev",
+		"site:build": "bun --env-file=.env run --filter '@vinyl-webshop/site' build"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.4",

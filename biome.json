@@ -6,17 +6,17 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"includes": ["**/*.ts", "**/*.tsx"],
+		"includes": ["**/*.ts", "**/*.tsx", "!**/routeTree.gen.ts"],
 		"ignoreUnknown": false
 	},
 	"formatter": {
 		"enabled": true,
-		"includes": ["**/*.ts", "**/*.tsx"],
+		"includes": ["**/*.ts", "**/*.tsx", "!**/routeTree.gen.ts"],
 		"indentStyle": "tab"
 	},
 	"linter": {
 		"enabled": true,
-		"includes": ["**/*.ts", "**/*.tsx"],
+		"includes": ["**/*.ts", "**/*.tsx", "!**/routeTree.gen.ts"],
 		"rules": {
 			"recommended": true
 		}
