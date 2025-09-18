@@ -1,29 +1,53 @@
+import { GrainGradient } from "@paper-design/shaders-react";
 import { createFileRoute } from "@tanstack/react-router";
-import { signIn, useSession } from "@/lib/auth";
+import { ArrowRightIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
 	component: RouteComponent,
 });
 
 function RouteComponent() {
-	const { data } = useSession();
-
 	return (
-		<div className="bg-red-500 p-4 text-white">
-			<button
-				type="button"
-				onClick={() =>
-					signIn.social({
-						provider: "github",
-					})
-				}
-			>
-				Sign In
-			</button>
+		<main className="relative min-h-screen flex items-center justify-center overflow-hidden">
+			<div className="absolute inset-0 -z-10">
+				<GrainGradient
+					className="w-full h-full"
+					colorBack="#000"
+					softness={0.42}
+					intensity={0.81}
+					shape="corners"
+					offsetX={0}
+					offsetY={0}
+					scale={0.76}
+					rotation={0}
+					speed={1.8}
+					colors={["#880d1e", "#dd2d4a", "#f26a8d"]}
+				/>
+			</div>
+			<div className="absolute inset-0 -z-10 bg-foreground/20" />
 
-			{data?.user && (
-				<p className="font-bold">{data.user.name}</p>
-			)}
-		</div>
+			<section className="px-6">
+				<h1 className="text-secondary text-center text-balance font-normal tracking-tight text-8xl md:text-9xl font-serif leading-none">
+					<span className="italic">passion</span> for vinyl
+				</h1>
+
+				<p className="text-secondary text-center text-balance font-normal tracking-tight text-xl md:text-2xl font-lora leading-none mt-4 max-w-xl mx-auto">
+					Vinylplader er mere end bare musik. De er et stykke historie, et
+					stykke kunst, et stykke kultur.
+				</p>
+
+				<div className="flex justify-center mt-8 items-center">
+					<Button
+						variant="default"
+						className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-secondary to-secondary/90 text-foreground"
+						size="lg"
+					>
+						Shop now
+						<ArrowRightIcon className="w-4 h-4" />
+					</Button>
+				</div>
+			</section>
+		</main>
 	);
 }
