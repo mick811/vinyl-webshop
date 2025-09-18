@@ -30,6 +30,7 @@
 		"packages/*"
 	],
 	"dependencies": {
-		"@types/node": "^24.5.1"
+		"@types/node": "^24.5.1",
+		"pg": "^8.16.3"
 	}
 }
