@@ -1,13 +1,20 @@
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import type { QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
 import {
-	createRootRoute,
+	createRootRouteWithContext,
 	HeadContent,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import type { ReactNode } from "react";
 import styles from "@/index.css?url";
+import { seo } from "@/utils/seo";
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+	queryClient: QueryClient;
+}>()({
 	head: () => ({
 		meta: [
 			{
@@ -17,9 +24,12 @@ export const Route = createRootRoute({
 				name: "viewport",
 				content: "width=device-width, initial-scale=1",
 			},
-			{
+			...seo({
 				title: "Vinyl Webshop",
-			},
+				description: "A webshop where I sell my vinyl records.",
+				keywords: "vinyl, webshop, records",
+				image: "https://placehold.co/600x400",
+			}),
 		],
 		links: [{ rel: "stylesheet", href: styles }],
 	}),
@@ -42,6 +52,19 @@ function RootDocument({ children }: { children: ReactNode }) {
 			</head>
 			<body>
 				{children}
+
+				<TanStackDevtools
+					plugins={[
+						{
+							name: "TanStack Query",
+							render: <ReactQueryDevtoolsPanel />,
+						},
+						{
+							name: "TanStack Router",
+							render: <TanStackRouterDevtoolsPanel />,
+						},
+					]}
+				/>
 				<Scripts />
 			</body>
 		</html>
