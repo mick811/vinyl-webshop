@@ -43,7 +43,7 @@ function RouteComponent() {
 							className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-secondary to-secondary/90 text-foreground"
 							size="lg"
 						>
-							Shop now
+							Udforsk vinyler
 							<ArrowRightIcon className="w-4 h-4" />
 						</Button>
 					</Link>
