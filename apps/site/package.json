@@ -18,6 +18,9 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@env": "workspace:*",
+    "@vinyl-webshop/database": "workspace:*",
+    "@vinyl-webshop/server": "workspace:*",
     "@paper-design/shaders-react": "^0.0.53",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.13",

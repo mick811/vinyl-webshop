@@ -1,5 +1,5 @@
 import { GrainGradient } from "@paper-design/shaders-react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,11 +9,10 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
 	return (
-		<main className="relative min-h-screen flex items-center justify-center overflow-hidden">
+		<main className="relative min-h-screen flex items-center justify-center overflow-hidden select-none">
 			<div className="absolute inset-0 -z-10">
 				<GrainGradient
 					className="w-full h-full"
-					colorBack="#000"
 					softness={0.42}
 					intensity={0.81}
 					shape="corners"
@@ -22,7 +21,7 @@ function RouteComponent() {
 					scale={0.76}
 					rotation={0}
 					speed={1.8}
-					colors={["#880d1e", "#dd2d4a", "#f26a8d"]}
+					colors={["#231942", "#5e548e", "#9f86c0"]}
 				/>
 			</div>
 			<div className="absolute inset-0 -z-10 bg-foreground/20" />
@@ -38,14 +37,16 @@ function RouteComponent() {
 				</p>
 
 				<div className="flex justify-center mt-8 items-center">
-					<Button
-						variant="default"
-						className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-secondary to-secondary/90 text-foreground"
-						size="lg"
-					>
-						Shop now
-						<ArrowRightIcon className="w-4 h-4" />
-					</Button>
+					<Link to="/">
+						<Button
+							variant="default"
+							className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-secondary to-secondary/90 text-foreground"
+							size="lg"
+						>
+							Shop now
+							<ArrowRightIcon className="w-4 h-4" />
+						</Button>
+					</Link>
 				</div>
 			</section>
 		</main>
