@@ -13,16 +13,16 @@ function RouteComponent() {
 				<div className="absolute inset-0 -z-10">
 					<GrainGradient
 						className="w-full h-full"
-						softness={0.89}
-						intensity={0.5}
+						softness={0.27}
+						intensity={0.34}
 						noise={0}
 						shape="corners"
 						offsetX={0}
-						offsetY={0}
+						offsetY={-0.12}
 						scale={0.76}
 						rotation={0}
 						speed={1.8}
-						colors={["#C0E916", "#8CDD0C", "#59D102"]}
+						colors={["#e7ecef"]}
 					/>
 				</div>
 				<div className="absolute inset-0 -z-10 bg-foreground/20" />
@@ -41,7 +41,7 @@ function RouteComponent() {
 						<Link to="/">
 							<Button
 								variant="default"
-								className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-secondary to-secondary/90 text-foreground"
+								className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-primary to-primary/90 text-foreground"
 								size="lg"
 							>
 								Udforsk vinyler
