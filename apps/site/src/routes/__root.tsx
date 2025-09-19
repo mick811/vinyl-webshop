@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import type { ReactNode } from "react";
+import Header from "@/components/header";
 import styles from "@/index.css?url";
 import { seo } from "@/utils/seo";
 
@@ -51,8 +52,8 @@ function RootDocument({ children }: { children: ReactNode }) {
 				<HeadContent />
 			</head>
 			<body>
+				<Header />
 				{children}
-
 				<TanStackDevtools
 					plugins={[
 						{
