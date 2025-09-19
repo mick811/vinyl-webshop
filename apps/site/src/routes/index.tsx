@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
 	return (
-		<main className="min-h-screen flex items-center justify-center overflow-hidden select-none">
+		<main className="min-h-screen flex items-center justify-center overflow-hidden select-none pb-[10vh] md:pb-0">
 			<div className="absolute inset-0 -z-10">
 				<GrainGradient
 					className="w-full h-full"
