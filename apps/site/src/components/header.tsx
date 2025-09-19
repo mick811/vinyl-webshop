@@ -7,7 +7,7 @@ export default function Header() {
 	const { data: session } = useSession();
 
 	return (
-		<header className="relative flex items-center justify-end p-6">
+		<header className="relative flex items-center justify-end p-6 z-10">
 			<div className="flex items-center">
 				<div
 					id={useId()}
