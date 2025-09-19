@@ -13,15 +13,16 @@ function RouteComponent() {
 			<div className="absolute inset-0 -z-10">
 				<GrainGradient
 					className="w-full h-full"
-					softness={0.42}
-					intensity={0.81}
+					softness={0.89}
+					intensity={0.5}
+					noise={0}
 					shape="corners"
 					offsetX={0}
 					offsetY={0}
 					scale={0.76}
 					rotation={0}
 					speed={1.8}
-					colors={["#231942", "#5e548e", "#9f86c0"]}
+					colors={["#C0E916", "#8CDD0C", "#59D102"]}
 				/>
 			</div>
 			<div className="absolute inset-0 -z-10 bg-foreground/20" />
