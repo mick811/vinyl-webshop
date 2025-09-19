@@ -9,10 +9,7 @@ export default function Header() {
 	return (
 		<header className="relative flex items-center justify-end p-6 z-10">
 			<div className="flex items-center">
-				<div
-					id={useId()}
-					className="flex items-center group"
-				>
+				<div id={useId()} className="flex items-center group">
 					{session ? (
 						// link to profile page
 						<Link to="/profile">
