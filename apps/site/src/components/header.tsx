@@ -15,7 +15,7 @@ export default function Header() {
 				>
 					{session ? (
 						// link to profile page
-						<Link to="/">
+						<Link to="/profile">
 							<Avatar>
 								<AvatarImage
 									src={session.user.image || ""}
